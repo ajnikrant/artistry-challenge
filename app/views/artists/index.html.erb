@@ -1,0 +1,12 @@
+<h1> These are all of our wonderful Artists! </h1>
+
+<ul>
+<%@artists.each do |artist|%>
+    <li><%=link_to artist.name, artist_path(artist.id)%><br><br></li>
+    <%end%>
+</ul>
+
+
+<%= link_to "Let's see the list of Instruments", instruments_path%><br>
+<%= link_to "Create a new Artist", new_artist_path%><br>
+<%= link_to "Assign a new instrument to an Artist", new_playtime_path%>

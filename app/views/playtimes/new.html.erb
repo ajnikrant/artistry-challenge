@@ -1,0 +1,18 @@
+<h1>Create a new Aritst and Instrument Pairing here! </h1>
+
+<%if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+    <%= error%> <br><br>
+    <%end%>
+ <%end%>
+
+<%=form_for @playtime do |f|%>
+    <%=f.label :artist_id, "Artist Name"%>
+    <%=f.collection_select :artist_id, Artist.all, :id, :name%><br><br>
+
+    <%=f.label :instrument_id, "Instrument Name"%>
+    <%=f.collection_select :instrument_id, Instrument.all, :id, :name%><br><br>
+
+
+    <%=f.submit%>
+<%end%>

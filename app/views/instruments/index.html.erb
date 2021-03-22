@@ -1,0 +1,9 @@
+<h1> These are all of our wonderful Instruments! </h1>
+
+<ul>
+<%@instruments.each do |instrument|%>
+    <li><%=link_to instrument.name, instrument_path(instrument.id)%><br><br></li>
+    <%end%>
+</ul>
+
+<%= link_to "Let's see the list of Artists", artists_path%><br>

@@ -1,0 +1,17 @@
+<h1> <%=@artist.name%> </h1><br><br>
+
+<h2>Title: <%=@artist.title%></h2å>
+<h3>Age: <%=@artist.age%></h3><br>
+
+<br>
+<h3> Instruments that this Artist plays:</h3>
+<ol>
+<%@artist.instruments.each do |instrument|%>
+   <li> Instrument: <%=instrument.name %><br><br></li>
+    Instrument Classifaction:<%=instrument.classification %><br><br><br>
+    <%end %>
+    </ol>
+
+<br>
+<br>
+<%= link_to "Back to the lists of Artists", artists_path%>

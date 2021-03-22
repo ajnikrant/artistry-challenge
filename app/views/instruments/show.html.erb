@@ -1,0 +1,10 @@
+<h1> <%=@instrument.name%> </h1><br><br>
+
+<h2>classification: <%=@instrument.classification%></h2å>
+
+<h3> <%@instrument.artists.each do |artist|%>
+    Artists who play this instrument: <%=artist.name %><br><br>
+    <%end %></h3>
+<br>
+<br>
+    <%= link_to "Back to the lists of Instruments", instruments_path%>
